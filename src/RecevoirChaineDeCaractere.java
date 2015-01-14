@@ -8,7 +8,7 @@ import gnu.io.PortInUseException;
 import gnu.io.SerialPort;
 import gnu.io.UnsupportedCommOperationException;
 
-public class RecevoirChaineDeCaractère 
+public class RecevoirChaineDeCaractere 
 {
 	public static void recevoir(String nomPort)
 	{
