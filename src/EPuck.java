@@ -70,4 +70,12 @@ public class EPuck
 		
 	}
 	
+	public void stop()
+	{
+		try{
+			out.write((EpuckOrder.ARRETER+"\n\r").getBytes("US-ASCII"));
+		}
+		catch (IOException e) {System.out.println("Problème sortie (stop)"); e.printStackTrace();}
+	}
+	
 }
