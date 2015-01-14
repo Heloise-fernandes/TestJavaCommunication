@@ -99,8 +99,8 @@ public class EPuck
 		try
 		 {
 			BufferedReader br = new BufferedReader(new InputStreamReader(in, "US-ASCII"));
-			
-			while (in.read()>-1)
+			Thread.sleep(500);
+			while (in.read()>0)
 			{
 			 System.out.println(br.readLine());
 			}
@@ -109,6 +109,10 @@ public class EPuck
 		 {
 			 System.out.println("Problème entrée (aide)");
 			 e.printStackTrace();
-	     }
+	     } catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+	    	System.out.println("Problème lecture (aide)");
+			e.printStackTrace();
+		}
 	}
 }
