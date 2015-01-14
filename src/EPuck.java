@@ -78,4 +78,31 @@ public class EPuck
 		catch (IOException e) {System.out.println("Problème sortie (stop)"); e.printStackTrace();}
 	}
 	
+	/**
+	 * Entree:void
+	 * Sortie:void
+	 * Affiche la valeur des capteur infrarouge
+	 * */
+	public void AfficherValeurCapteur()
+	{
+		try
+		{
+			out.write((EpuckOrder.AIDE+"\n\r").getBytes("US-ASCII"));
+		}
+		catch (IOException e) 
+		{
+			System.out.println("Problème sortie (aide)"); 
+			e.printStackTrace();
+		}
+		try
+		 {
+			 BufferedReader br = new BufferedReader(new InputStreamReader(in, "US-ASCII"));
+			 System.out.println(br.readLine());
+		 }
+		 catch (IOException e) 
+		 {
+			 System.out.println("Problème entrée (aide)");
+			 e.printStackTrace();
+	     }
+	}
 }

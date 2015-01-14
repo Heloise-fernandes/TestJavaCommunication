@@ -20,7 +20,7 @@ public class SerialPortConnexion
 	private CommPortIdentifier portID;
 	
 	/**Constructeur*/
-	public void SerialPortConnexion(String nom)
+	public SerialPortConnexion(String nom)
 	{
 		if (verificationExistancePort(nom)!=null)
 		{

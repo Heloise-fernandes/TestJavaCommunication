@@ -8,7 +8,8 @@ public enum EpuckOrder {
 	AVANCERTOUTDROIT("D"),
 	ARRETER("S"),
 	AIDE("H"),
-	TOUPIE("D");
+	TOUPIE("D"),
+	IR_RECEPTEUR("G");
 	
 	private final String ordre;
 	
