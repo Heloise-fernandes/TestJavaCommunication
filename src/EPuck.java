@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Classe modélisant le robot ePuck. On peut lui envoyer des ordres.
@@ -13,6 +14,7 @@ public class EPuck
 {
 	private InputStream in;
 	private OutputStream out;
+	private BufferedReader br;
 	
 	/**
 	 * Constructeur
@@ -23,6 +25,12 @@ public class EPuck
 	{
 		this.in=in;
 		this.out=out;
+		try {
+			this.br= new BufferedReader(new InputStreamReader(in, "US-ASCII"));
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Problème création robot");
+			e.printStackTrace();
+		}
 	}
 	
 	/**
@@ -63,10 +71,14 @@ public class EPuck
 		
 		try
 		 {
-			 BufferedReader br = new BufferedReader(new InputStreamReader(in, "US-ASCII"));
-			 System.out.println(br.readLine());
+			//Thread.sleep(500);
+			 while(in.read()>0)
+			 {
+				 System.out.println(br.readLine());
+			 }
 		 }
-		 catch (IOException e) {System.out.println("Problème entrée (aide)");e.printStackTrace();}
+		catch (IOException e) {System.out.println("Problème lecture (aide)");e.printStackTrace();} //catch (InterruptedException e) {e.printStackTrace();}
+		
 		
 	}
 	
