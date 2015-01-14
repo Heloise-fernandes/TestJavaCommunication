@@ -111,6 +111,7 @@ public class EPuck
 			 e.printStackTrace();
 	     } catch (InterruptedException e) {
 			// TODO Auto-generated catch block
+	    	 
 	    	System.out.println("Problème lecture (aide)");
 			e.printStackTrace();
 		}
