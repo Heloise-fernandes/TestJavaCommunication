@@ -94,10 +94,16 @@ public class EPuck
 			System.out.println("Problème sortie (aide)"); 
 			e.printStackTrace();
 		}
+		
+		
 		try
 		 {
-			 BufferedReader br = new BufferedReader(new InputStreamReader(in, "US-ASCII"));
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "US-ASCII"));
+			
+			while (in.read()>-1)
+			{
 			 System.out.println(br.readLine());
+			}
 		 }
 		 catch (IOException e) 
 		 {
