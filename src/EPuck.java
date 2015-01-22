@@ -71,10 +71,10 @@ public class EPuck
 		
 		try
 		 {
-			//Thread.sleep(500);
+			
 			 while(in.read()>0)
 			 {
-				 System.out.println(br.readLine());
+				 System.out.println(br.readLine()); 
 			 }
 		 }
 		catch (IOException e) {System.out.println("Problème lecture (aide)");e.printStackTrace();} //catch (InterruptedException e) {e.printStackTrace();}

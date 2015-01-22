@@ -10,7 +10,9 @@ public class ProgrammePrincipale {
 		try 
 		{
 			robot.aide();
+			Thread.sleep(300);
 			robot.aide();
+			Thread.sleep(1000);
 			robot.toupie(300);
 			Thread.sleep(10000);
 			robot.stop();

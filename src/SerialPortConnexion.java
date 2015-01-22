@@ -57,10 +57,10 @@ public class SerialPortConnexion
 	{
 		try
 		{
-			 this.port.setSerialPortParams(9600, SerialPort.DATABITS_8, SerialPort.STOPBITS_1,SerialPort.PARITY_NONE);
+			 this.port.setSerialPortParams(19200, SerialPort.DATABITS_8, SerialPort.STOPBITS_1,SerialPort.PARITY_NONE);
 			 this.port.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
-			 //this.port.enableReceiveTimeout(5000);
-			 //this.port.setInputBufferSize(120000);
+			 //this.port.enableReceiveTimeout(10000);
+			 //this.port.setInputBufferSize(500000);
 		}
 		catch (UnsupportedCommOperationException e3) 
 		{
